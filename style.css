@@ -15,6 +15,242 @@
 }
 
 body {
+    min-height: 100vh;
     font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
+    background-color: #eff6ff;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
 }
+
+.container {
+    flex: 1;
+}
+
+/* header styles */
+.header {
+    background-color: lightsteelblue;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.2rem;
+
+}
+
+.headerBtn {
+    /* height: 100px; */
+    align-self: center;
+}
+
+.headerBtn .button {
+    font-weight: bold;
+    padding: 16px;
+    background-color: rgb(188, 223, 246);
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.headerBtn .button:hover {
+    background-color: #fff;
+}
+
+
+/* Main styles */
+
+.main {
+    background-color: lightsalmon;
+    
+}
+
+/* Form styles */
+
+.modal {
+    height: 400px;
+    max-width: 36ch;
+    padding: 12px;
+    margin: auto;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+}
+
+.modal::backdrop {
+    background-color: purple;
+    opacity: .2;
+    /* background-color: rgba(0, 0, 0, .4) ; */
+    
+}
+
+.form {
+    background-color: lemonchiffon;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    font-size: 2.8rem;
+}
+
+.form h4 {
+    align-self: center;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox label {
+    font-size: 2.6rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    border: none;
+    border: none;
+    border-radius: 10px;
+    padding: 6px;
+    height: 4rem;
+    font-size: 2rem;
+
+}
+
+.form .addBtn {
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.form .addBtn:hover {
+    background-color: #fff;
+}
+
+
+/* Footer styles */
+
+.footer {
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    padding: 4px;
+}
+
+/* .container {
+    display: grid;
+    grid-template-rows: 80px 680px 20px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    gap: 4px;
+    justify-content: center;
+    justify-items: center;
+    
+}
+
+.header {
+    background-color: lightsteelblue;
+    grid-area: header;
+    align-self: center;
+}
+
+.header h1 {
+    font-size: 6rem;
+}
+
+.main {
+    background-color: lightsalmon;
+    grid-area: main;
+}
+
+.main .button {
+    font-size: 2.8rem;
+    font-weight: bold;
+    padding: 16px;
+    background-color: rgb(188, 223, 246);
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    cursor: pointer;
+    position: relative;
+    left: 60px;
+    margin-bottom: 8px;
+}
+
+.main .button:hover {
+    background-color: #fff;
+}
+
+.footer {
+    background-color: lightcyan;
+    grid-area: footer;
+}
+
+.modal {
+    background-color: rgb(243, 228, 214);
+    height: 350px;
+    width: 300px;
+    padding: 8px;
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+input[type="text"],
+input[type="number"] {
+    font-size: 2rem;
+    height: 4rem;
+    width: 24rem;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.checkbox {
+    font-size: 2.2rem;
+    position: relative;
+    right: 40px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.form {
+
+}
+
+.form > * {
+    margin: 8px;
+}
+
+.form button {
+    font-size: 2.6rem;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color:lightgreen;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #fff;
+}
+
+.form h2 {
+    font-size: 3rem;
+    padding-top: 2rem;
+} */
