@@ -15,31 +15,42 @@
     <div class="container">
         <div class="header">
             <h1>Library</h1>
+            <div class="headerBtn">
+                <button type="button" class="button openModal">+ New Book</button>
+            </div>
         </div>
         <div class="main">
-            <form action="#" method="post" class="">
-                <h3>New Book</h3>
-                <input type="text" name="title" id="title" placeholder="Title">
-                <input type="text" name="author" id="author" placeholder="Author">
-                <input type="number" name="pages" id="pages" placeholder="Pages">
-                <div>
-                    <input type="checkbox" name="read" id="read">
-                    <label for="read">I have read it.</label>
-                </div>
-                <button type="button" id="addBtn">Add Book</button>
-            </form>
+            
+            <dialog  class="modal" id="modal">
+                
+                <form action="#" method="" class="form">
+                    <h4>New Book</h4>
+                    <input type="text" name="title" id="title" placeholder="Title" pattern="/^[a-zA-Z]+$/" required>
+                    <input type="text" name="author" id="author" placeholder="Author" pattern="/^[a-zA-Z\d]+$/" required>
+                    <input type="number" name="pages" id="pages" placeholder="Pages" pattern="/^\d+$/" required>
+                    <div class="checkbox">
+                        <input type="checkbox" name="read" id="read">
+                        <label for="read">I have read it</label>
+                    </div>
+                    <button formmethod="dialog" class="addBtn closeModal" id="addBtn">Add Book</button>
+                    
+                </form>
+            
+            </dialog>
         </div>
-        <div class="footer">
-            <p>
-                Copyright ©
-                <script>
-                    document.write(new Date().getFullYear()) 
-                </script>
-                Pacôme MARTIN
-                <a href="https://github.com/Pacome86" target="_blank">
-                    <i class="fab fa-github" aria-hidden="true"></i></a>
-            </p>
-        </div>
+        
     </div>
+    <div class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear()) 
+            </script>
+            Pacôme MARTIN
+            <a href="https://github.com/Pacome86" target="_blank">
+                <i class="fab fa-github" aria-hidden="true"></i></a>
+        </p>
+    </div>
+    
 </body>
 </html>
