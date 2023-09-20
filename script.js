@@ -14,8 +14,8 @@ function Book(title, author, pages, read) {
 }
 
 //Takes user's input and store the new book objects into an array (myLibrary) 
-function addBookToLibrary(e) {
-    e.preventDefault(); // to stop the form for submitting
+function addBookToLibrary() {
+    //e.preventDefault(); // to stop the form for submitting
     const title = document.querySelector('#title').value;
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
@@ -28,8 +28,32 @@ function addBookToLibrary(e) {
     //for display purposes only
     //console.warn('added', book);
     //console.log(myLibrary);
-    return myLibrary;
+    //return myLibrary;
 }
+
+
+// Toggle the modal dialog
+const modal = document.querySelector('#modal');
+const openModal = document.querySelector('.openModal');
+//const closeModal = document.querySelector('.closeModal');
+
+openModal.addEventListener('click', () => {
+    modal.showModal();
+});
+/*
+closeModal.addEventListener('click', () => {
+    modal.close();
+});
+*/
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.close();
+    };
+});
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
