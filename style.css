@@ -60,11 +60,58 @@ body {
 }
 
 
-/* Main styles */
-
+/* Main styles and cards display */
+/* For visualization purpose... */
 .main {
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */ /* For visualization purpose... */
+    padding: 12px;
     
+}
+
+.main .display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.display .card {
+    background-color: #FFFFFF;
+    height: 240px;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 10px solid orange;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
+
+    display: grid;
+    align-content: space-between;
+
+}
+
+.card p {
+    font-size: 2rem;
+    
+}
+
+.card h2 {
+    font-style: italic;
+}
+
+.card button {
+    font-size: 2.2rem;
+    padding: 6px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+button.progress {
+    background-color: rgb(165, 244, 165);
+}
+
+button.delete {
+    background-color: rgb(230, 145, 145);
 }
 
 /* Form styles */
