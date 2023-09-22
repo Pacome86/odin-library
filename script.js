@@ -13,7 +13,8 @@ function Book(title, author, pages, read) {
     };
 }
 
-//Takes user's input and store the new book objects into an array (myLibrary) 
+//Takes user's input and store the new book objects into an array (myLibrary)
+// Then display the each book object on its own card on the page 
 function addBookToLibrary() {
   //e.preventDefault(); // to stop the form for submitting
   const title = document.querySelector("#title").value;
@@ -27,7 +28,7 @@ function addBookToLibrary() {
 
   //for display purposes only
   //console.warn('added', book);
-  console.log(myLibrary);
+  //console.log(myLibrary);
 
   //Create a card and add it to the div for display on the page
   myLibrary.forEach((Book) => {
@@ -56,17 +57,35 @@ function addBookToLibrary() {
       cardRead.textContent = Book.read;
       cardRead.classList.add("progress");
       card.appendChild(cardRead);
+        
+      //Change the status of the Book card from "read" to "not read" and vice versa 
+      cardRead.addEventListener("click", () => {
+          if (cardRead.textContent === "Read") {
+              cardRead.textContent = "Not read";
+          } else if (cardRead.textContent === "Not read") {
+              cardRead.textContent = "Read";
+          }
+      });
 
       //create a button to delete the card and append it to the card
       const cardDelete = document.createElement("button");
       cardDelete.textContent = "Delete";
       cardDelete.classList.add("delete");
       card.appendChild(cardDelete);
+        
+      //Remove the card/book instance from the display
+      cardDelete.addEventListener("click", () => {
+        display.removeChild(card);
+      });
 
       // Append the card to the display div on the page
       const display = document.querySelector(".display");
       display.appendChild(card);
+      
+      //Store the card locally. Test localStorage...
+      localStorage.setItem(display, card); 
     }
+      
   });
 
   myLibrary.pop(book);
