@@ -3,7 +3,6 @@
 /* Project Odin-Library */
 
 /* General style */
-
 * {
     margin: 0;
     padding: 0;
@@ -32,17 +31,15 @@ body {
 
 /* header styles */
 .header {
-    background-color: lightsteelblue;
+    background-color: #fff;
     padding: 12px;
     display: flex;
     justify-content: space-between;
     font-size: 2.2rem;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
-
 }
 
 .headerBtn {
-    /* height: 100px; */
     align-self: center;
 }
 
@@ -62,23 +59,23 @@ body {
 
 
 /* Main styles and cards display */
-/* For visualization purpose... */
 .main {
-    /* background-color: lightsalmon; */ /* For visualization purpose... */
+
     padding: 12px;
     
 }
 
 .display {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    gap: 40px;
     margin-top: 16px;
 }
 
 .card {
     background-color: #FFFFFF;
-    height: 240px;
+    height: 300px;
+    width: 240px; 
     padding: 30px;
     border-radius: 10px;
     border-left: 10px solid orange;
@@ -107,10 +104,6 @@ body {
     border-radius: 4px;
 }
 
-.card button:hover {
-    background-color: rgb(204, 224, 237);
-}
-
 .card button.progress {
     background-color: rgb(165, 244, 165);
 }
@@ -119,8 +112,13 @@ body {
     background-color: rgb(230, 145, 145);
 }
 
-/* Form styles */
+.card button.progress:hover,
+.card button.delete:hover {
+    background-color: rgb(204, 224, 237);
+    opacity: .6;
+}
 
+/* Form styles */
 .modal {
     height: 400px;
     max-width: 36ch;
@@ -132,9 +130,7 @@ body {
 
 .modal::backdrop {
     background-color: purple;
-    opacity: .2;
-    /* background-color: rgba(0, 0, 0, .4) ; */
-    
+    opacity: .2;   
 }
 
 .form {
@@ -185,11 +181,8 @@ input[type="number"] {
     background-color: #fff;
 }
 
-
 /* Footer styles */
-
 .footer {
-    /* background-color: rgb(255, 182, 193); */
     background-color: lightsteelblue;
     display: flex;
     justify-content: center;
@@ -200,114 +193,3 @@ input[type="number"] {
 .footer a {
     font-size: 2.4rem;
 }
-
-/* .container {
-    display: grid;
-    grid-template-rows: 80px 680px 20px;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-    gap: 4px;
-    justify-content: center;
-    justify-items: center;
-    
-}
-
-.header {
-    background-color: lightsteelblue;
-    grid-area: header;
-    align-self: center;
-}
-
-.header h1 {
-    font-size: 6rem;
-}
-
-.main {
-    background-color: lightsalmon;
-    grid-area: main;
-}
-
-.main .button {
-    font-size: 2.8rem;
-    font-weight: bold;
-    padding: 16px;
-    background-color: rgb(188, 223, 246);
-    border: none;
-    outline: none;
-    border-radius: 24px;
-    cursor: pointer;
-    position: relative;
-    left: 60px;
-    margin-bottom: 8px;
-}
-
-.main .button:hover {
-    background-color: #fff;
-}
-
-.footer {
-    background-color: lightcyan;
-    grid-area: footer;
-}
-
-.modal {
-    background-color: rgb(243, 228, 214);
-    height: 350px;
-    width: 300px;
-    padding: 8px;
-    font-size: 3rem;
-    text-align: center;
-
-}
-
-input[type="text"],
-input[type="number"] {
-    font-size: 2rem;
-    height: 4rem;
-    width: 24rem;
-    padding: 4px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-}
-
-.checkbox {
-    font-size: 2.2rem;
-    position: relative;
-    right: 40px;
-}
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    
-}
-
-.form {
-
-}
-
-.form > * {
-    margin: 8px;
-}
-
-.form button {
-    font-size: 2.6rem;
-    padding: 8px;
-    border: none;
-    outline: none;
-    background-color:lightgreen;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-.form button:hover {
-    background-color: #fff;
-}
-
-.form h2 {
-    font-size: 3rem;
-    padding-top: 2rem;
-} */
